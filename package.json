@@ -14,9 +14,11 @@
   },
   "author": "Falk Hoppe <falkhoppe81@gmail.com>",
   "license": "Apache-2.0",
-  "bin": {
-    "hy-pattern-lib": "bin/hy-pattern-lib.js"
-  },
+  "files": [
+    "dist/*",
+    "LICENSE",
+    "lib/*"
+  ],
   "devDependencies": {
     "eslint": "^8.18.0",
     "eslint-config-standard": "^17.0.0-1",
