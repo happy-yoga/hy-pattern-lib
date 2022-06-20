@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precompile": "rm -rf dist && mkdir -p dist",
+    "compile": "faucet --fingerprint",
+    "compile:watch": "faucet --watch",
+    "lint:js": "eslint lib",
+    "lint": "npm run lint:js",
+    "prepublishOnly": "npm run lint && npm run compile"
   },
   "author": "Falk Hoppe <falkhoppe81@gmail.com>",
   "license": "Apache-2.0",
@@ -14,8 +19,11 @@
   "devDependencies": {
     "eslint": "^8.18.0",
     "eslint-config-standard": "^17.0.0-1",
-    "eslint-plugin-node": "^11.1.0"
+    "eslint-plugin-node": "^11.1.0",
+    "faucet-pipeline-css": "^0.2.1",
+    "faucet-pipeline-js": "^2.1.8",
+    "faucet-pipeline-sass": "^1.7.1",
+    "sass": "^1.52.3"
   },
-  "type": "module",
   "module": "index.js"
 }
