@@ -9,7 +9,8 @@
     "compile:watch": "faucet --watch",
     "lint:js": "eslint lib",
     "lint": "npm run lint:js",
-    "prepublishOnly": "npm run lint && npm run compile"
+    "prepublishOnly": "npm run compile",
+    "test": "npm run lint"
   },
   "author": "Falk Hoppe <falkhoppe81@gmail.com>",
   "license": "Apache-2.0",
