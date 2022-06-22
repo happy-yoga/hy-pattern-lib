@@ -8,7 +8,7 @@ module.exports = {
 
   sass: [{
     source: './lib/css/main.scss',
-    target: './dist/hy-components.css'
+    target: './dist/hy-pattern-lib.css'
   }],
 
   manifest: {

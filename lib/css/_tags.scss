@@ -1,0 +1,13 @@
+@use "./breakpoints";
+
+body {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: system;
+  color: var(--primary-ft, var(--def-primary-ft));
+  background-color: var(--primary-bg, var(--def-primary-bg));
+  padding: var(--box-padding, var(--def-box-padding));
+
+  // @include breakpoints.mq-xs("below") {
+  //   // background-color: red !important;
+  // }
+}

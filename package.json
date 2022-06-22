@@ -7,8 +7,9 @@
     "precompile": "rm -rf dist && mkdir -p dist",
     "compile": "faucet --fingerprint",
     "compile:watch": "faucet --watch",
+    "lint:css": "stylelint \"lib/css/**/*.scss\"",
     "lint:js": "eslint lib",
-    "lint": "npm run lint:js",
+    "lint": "npm run lint:js && npm run lint:css",
     "prepublishOnly": "npm run compile",
     "test": "npm run lint"
   },
@@ -26,7 +27,9 @@
     "faucet-pipeline-css": "^0.2.1",
     "faucet-pipeline-js": "^2.1.8",
     "faucet-pipeline-sass": "^1.7.1",
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^4.0.0"
   },
   "module": "index.js"
 }

@@ -1,0 +1,44 @@
+@use "sass:map";
+
+$breakpoints: (
+  "xs": 24rem,
+  "md": 48rem,
+  "lg": 75rem,
+  "xl": 112rem
+) !default;
+
+@mixin mq-below-above-for-breakpoint($breakpoint, $direction: "below") {
+  $operator: max-width;
+
+  @if $direction == "above" {
+    $operator: min-width;
+  }
+
+  @media screen and (#{$operator}: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin mq-xs($direction: "below") {
+  @include mq-below-above-for-breakpoint("xs", $direction) {
+    @content;
+  }
+}
+
+@mixin mq-md($direction: "below") {
+  @include mq-below-above-for-breakpoint("md", $direction) {
+    @content;
+  }
+}
+
+@mixin mq-ld($direction: "below") {
+  @include mq-below-above-for-breakpoint("lg", $direction) {
+    @content;
+  }
+}
+
+@mixin mq-xl($direction: "below") {
+  @include mq-below-above-for-breakpoint("xl", $direction) {
+    @content;
+  }
+}
