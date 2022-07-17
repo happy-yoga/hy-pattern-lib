@@ -1,0 +1,17 @@
+@use "../breakpoints";
+
+scroll-foam {
+  @include breakpoints.mq-md($direction: "above") {
+    & main {
+      transition: transform 0.5s;
+    }
+
+    &.squeeze main {
+      transform: scale(95%);
+    }
+
+    &.squeeze.squeeze-out main {
+      transform: scale(100%);
+    }
+  }
+}
