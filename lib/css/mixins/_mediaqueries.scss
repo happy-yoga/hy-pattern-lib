@@ -2,6 +2,7 @@
 
 $breakpoints: (
   "xs": 24rem,
+  "xs-y": 45rem,
   "md": 48rem,
   "lg": 75rem,
   "xl": 112rem
@@ -19,8 +20,29 @@ $breakpoints: (
   }
 }
 
+@mixin mq-below-above-for-breakpoint-x-and-y($breakpoint-x, $breakpoint-y, $direction: "below") {
+  $operator-x: max-width;
+  $operator-y: max-height;
+
+  @if $direction == "above" {
+    $operator-x: min-width;
+    $operator-y: min-height;
+  }
+
+  /* stylelint-disable-next-line max-line-length */
+  @media screen and (#{$operator-x}: map.get($breakpoints, $breakpoint-x)) and (#{$operator-y}: map.get($breakpoints, $breakpoint-y)) {
+    @content;
+  }
+}
+
 @mixin mq-xs($direction: "below") {
   @include mq-below-above-for-breakpoint("xs", $direction) {
+    @content;
+  }
+}
+
+@mixin mq-mobile($direction: "below") {
+  @include mq-below-above-for-breakpoint-x-and-y("xs", "xs-y", $direction) {
     @content;
   }
 }
@@ -31,7 +53,7 @@ $breakpoints: (
   }
 }
 
-@mixin mq-ld($direction: "below") {
+@mixin mq-lg($direction: "below") {
   @include mq-below-above-for-breakpoint("lg", $direction) {
     @content;
   }

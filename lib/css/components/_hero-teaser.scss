@@ -1,0 +1,40 @@
+@use "../breakpoints";
+
+hero-teaser {
+  display: block;
+  width: 100%;
+  padding: var(--box-padding, var(--def-box-padding));
+  background: linear-gradient(180deg, rgb(252 252 252 / 100%) 0%, rgb(246 246 246 / 100%) 100%);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  height: 45rem;
+  height: 100vh;
+
+  // border-radius: 0 0 10% 0 / 0 0 20% 0;
+
+  @include breakpoints.mq-xs {
+    height: 45rem;
+  }
+
+  @include breakpoints.mq-mobile {
+    height: 100vh;
+  }
+
+  &.with-center-stage-image {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 30%;
+      width: 30vw;
+      min-width: 15rem;
+      max-width: 25rem;
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+    }
+  }
+}
