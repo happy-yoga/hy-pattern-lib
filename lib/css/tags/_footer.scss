@@ -6,4 +6,18 @@ footer {
 
   color: var(--contrast-ft, var(--def-contrast-ft));
   padding-bottom: 3rem;
+  font-size: 0.875rem;
+
+  h4 {
+    font-weight: bold;
+    color: var(--primary-ft, var(--def-primary-ft));
+    text-transform: uppercase;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: var(--contrast-ft, var(--def-contrast-ft));
+  }
 }

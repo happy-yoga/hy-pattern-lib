@@ -3,11 +3,15 @@ dl {
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.5rem;
-    ustify-items: start;
+    justify-items: start;
 
     dd,
     dt {
       margin: 0;
+    }
+
+    dt {
+      font-weight: bold;
     }
   }
 }
