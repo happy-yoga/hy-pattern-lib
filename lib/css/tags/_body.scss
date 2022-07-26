@@ -4,5 +4,5 @@ body {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: system;
   color: var(--primary-ft, var(--def-primary-ft));
-  background: var(--primary-bg, var(--def-primary-bg));
+  background-color: var(--contrast-bg, var(--def-contrast-bg));
 }

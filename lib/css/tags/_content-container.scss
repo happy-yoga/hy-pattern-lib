@@ -1,0 +1,8 @@
+@use "../mixins/grid.scss";
+
+content-container {
+  display: block;
+  min-height: 300vh;
+
+  @include grid.full-column;
+}

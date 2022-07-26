@@ -1,0 +1,6 @@
+ul,
+ol {
+  &.unstyled li {
+    list-style-type: none;
+  }
+}

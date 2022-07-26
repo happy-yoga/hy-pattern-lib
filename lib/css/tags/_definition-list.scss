@@ -1,0 +1,13 @@
+dl {
+  &.list-style {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+    ustify-items: start;
+
+    dd,
+    dt {
+      margin: 0;
+    }
+  }
+}

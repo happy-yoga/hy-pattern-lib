@@ -1,4 +1,9 @@
+@use "../breakpoints";
+@use "../mixins/grid";
+
 footer {
-  display: block;
-  background-color: red;
+  @include grid.split-column;
+
+  color: var(--contrast-ft, var(--def-contrast-ft));
+  padding-bottom: 3rem;
 }

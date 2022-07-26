@@ -1,0 +1,20 @@
+@use "../breakpoints";
+@use "./spacing";
+
+@mixin full-column {
+  @include spacing.content-centering-margin;
+}
+
+@mixin split-column {
+  @include spacing.content-centering-margin;
+
+  @include breakpoints.mq-md($direction: "above") {
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @include breakpoints.mq-lg($direction: "above") {
+    gap: 3rem;
+  }
+}

@@ -1,4 +1,5 @@
 main {
-  min-height: 200vh;
-  background-color: blue;
+  display: block;
+  z-index: 0;
+  background: var(--primary-bg, var(--def-primary-bg));
 }

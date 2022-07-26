@@ -1,0 +1,11 @@
+@use "../breakpoints";
+
+@mixin content-centering-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include breakpoints.mq-md($direction: "above") {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+}
