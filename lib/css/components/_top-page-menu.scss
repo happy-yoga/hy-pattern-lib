@@ -1,21 +1,111 @@
+@use "sass:list";
+@use "../mixins/spacing";
+@use "../breakpoints";
+
+$link-color-swaps: #b49aff #bcd671 #fea080 #d7c3f6;
+
 top-page-menu {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  transition: background 0.5s ease-out, width 0.5s ease-out, height 0.5s ease-out;
+  background-color: rgb(249 249 249 / 50%);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  height: 3rem;
+  padding: 0.5rem;
+
   nav {
     // empty yet
   }
 
+  & > ul {
+    display: none;
+  }
+
   ul {
-    margin: 0;
+    width: 100%;
     padding: 0;
   }
 
   li {
-    margin: 0;
-    padding: 0;
+    padding: 0.5rem;
+    margin: 0 2rem;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  a.link {
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-40%);
+      content: "";
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 3px;
+      background-color: pink;
+    }
+  }
+
+  @for $i from 1 through length($link-color-swaps) {
+    $color: list.nth($link-color-swaps, $i);
+
+    li:nth-child(#{$i}) a::before {
+      background-color: $color;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+  }
+
+  &.open {
+    background-color: rgb(249 249 249 / 100%);
+    height: auto;
+
+    ul {
+      display: block;
+    }
   }
 
   button[is="nav-button"] {
     position: absolute;
     right: 1rem;
     top: 1.5rem;
+    transform: translateY(-50%);
+  }
+
+  @include breakpoints.mq-lg($direction: "below") {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  @include breakpoints.mq-lg($direction: "above") {
+    width: 4rem;
+    height: 10rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    left: auto;
+    z-index: 1000;
+
+    &.open {
+      width: 20rem;
+      min-height: 90vh;
+    }
   }
 }

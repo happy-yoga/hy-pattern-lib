@@ -1,0 +1,13 @@
+a.button,
+button.button {
+  background-color: var(--res-button-bg);
+  color: var(--res-button-ft);
+  border-radius: 3px;
+  padding: 0.5rem;
+  border: none;
+
+  &:hover {
+    background-color: var(--res-button-hov-bg);
+    color: var(--res-button-hov-ft);
+  }
+}

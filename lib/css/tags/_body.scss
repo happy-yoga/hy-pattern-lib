@@ -3,6 +3,6 @@
 body {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: system;
-  color: var(--primary-ft, var(--res-primary-ft));
-  background-color: var(--contrast-bg, var(--res-contrast-bg));
+  color: var(--res-primary-ft);
+  background-color: var(--res-contrast-bg);
 }

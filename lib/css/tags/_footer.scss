@@ -4,13 +4,13 @@
 footer {
   @include grid.split-column;
 
-  color: var(--contrast-ft, var(--res-contrast-ft));
+  color: var(--res-contrast-ft);
   padding-bottom: 3rem;
   font-size: 0.875rem;
 
   h4 {
     font-weight: bold;
-    color: var(--primary-ft, var(--res-primary-ft));
+    color: var(--res-primary-ft);
     text-transform: uppercase;
   }
 
@@ -18,7 +18,7 @@ footer {
   a:visited,
   a:hover,
   a:active {
-    color: var(--contrast-ft, var(--res-contrast-ft));
+    color: var(--res-contrast-ft);
   }
 
   @include breakpoints.mq-md($direction: "above") {

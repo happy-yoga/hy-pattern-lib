@@ -5,11 +5,19 @@
   --def-box-padding: 0.5rem;
   --def-contrast-bg: rgb(241 245 243);
   --def-contrast-ft: rgb(88 90 89);
+  --def-button-bg: rgb(102 76 251);
+  --def-button-ft: rgb(253 253 253);
+  --def-button-hov-bg: rgb(135 118 232);
+  --def-button-hov-ft: rgb(255 255 255);
 
   // variables to use in code
   --res-primary-ft: var(--primary-ft, var(--res-primary-ft));
-  --res-primary-bg: var(--def-primary-bg, var(--def-primary-bg));
-  --res-box-padding: var(--def-box-padding, var(--def-box-padding));
-  --res-contrast-bg: var(--def-contrast-bg, var(--def-contrast-bg));
-  --res-contrast-ft: var(--def-contrast-ft, var(--def-contrast-ft));
+  --res-primary-bg: var(--primary-bg, var(--def-primary-bg));
+  --res-box-padding: var(--box-padding, var(--def-box-padding));
+  --res-contrast-bg: var(--contrast-bg, var(--def-contrast-bg));
+  --res-contrast-ft: var(--contrast-ft, var(--def-contrast-ft));
+  --res-button-bg: var(--button-bg, var(--def-button-bg));
+  --res-button-ft: var(--button-ft, var(--def-button-ft));
+  --res-button-hov-bg: var(--button-hov-bg, var(--def-button-hov-bg));
+  --res-button-hov-ft: var(--button-hov-ft, var(--def-button-hov-ft));
 }
