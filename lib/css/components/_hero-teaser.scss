@@ -3,7 +3,7 @@
 hero-teaser {
   display: block;
   width: 100%;
-  padding: var(--box-padding, var(--def-box-padding));
+  padding: var(--box-padding, var(--res-box-padding));
   background: linear-gradient(180deg, rgb(252 252 252 / 100%) 0%, rgb(246 246 246 / 100%) 100%);
   background-image: var(--bg-image);
   background-size: cover;
