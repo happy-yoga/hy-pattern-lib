@@ -5,10 +5,11 @@
   --def-box-padding: 0.5rem;
   --def-contrast-bg: rgb(241 245 243);
   --def-contrast-ft: rgb(88 90 89);
-  --def-button-bg: rgb(102 76 251);
+  --def-button-bg: rgb(250 0 135);
   --def-button-ft: rgb(253 253 253);
   --def-button-hov-bg: rgb(135 118 232);
   --def-button-hov-ft: rgb(255 255 255);
+  --def-link-ft: rgb(250 0 135);
 
   // variables to use in code
   --res-primary-ft: var(--primary-ft, var(--res-primary-ft));
@@ -20,4 +21,5 @@
   --res-button-ft: var(--button-ft, var(--def-button-ft));
   --res-button-hov-bg: var(--button-hov-bg, var(--def-button-hov-bg));
   --res-button-hov-ft: var(--button-hov-ft, var(--def-button-hov-ft));
+  --res-link-ft: var(--link-ft, var(--def-link-ft));
 }

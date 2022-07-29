@@ -2,7 +2,8 @@
 
 content-container {
   display: block;
-  min-height: 300vh;
+  min-height: 150vh;
+  padding: 7rem 0 5rem;
 
   @include grid.full-column;
 }

@@ -15,6 +15,7 @@ top-page-menu {
   margin-top: 0.5rem;
   height: 3rem;
   padding: 0.5rem;
+  overflow-y: scroll;
 
   nav {
     // empty yet
@@ -92,6 +93,21 @@ top-page-menu {
   @include breakpoints.mq-lg($direction: "below") {
     margin-left: 1rem;
     margin-right: 1rem;
+    max-height: 85vh;
+
+    .ios & {
+      z-index: 999;
+      position: fixed;
+      top: auto;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background-color: rgb(249 249 249 / 80%);
+    }
+
+    .ios &.open {
+      background-color: rgb(249 249 249 / 100%);
+    }
   }
 
   @include breakpoints.mq-lg($direction: "above") {

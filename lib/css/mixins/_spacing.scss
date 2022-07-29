@@ -1,8 +1,13 @@
 @use "../breakpoints";
 
 @mixin content-centering-margin {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  @media screen and (orientation: landscape) {
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+  }
 
   @include breakpoints.mq-md($direction: "above") {
     margin-left: 3vw;

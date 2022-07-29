@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: underline;
+}
+
 a:link,
 a:visited,
 a:hover,
@@ -5,8 +9,8 @@ a:active {
   color: var(--res-primary-ft);
   text-decoration: none;
   cursor: pointer;
-}
 
-a:hover {
-  text-decoration: underline;
+  p & {
+    color: var(--res-link-ft);
+  }
 }

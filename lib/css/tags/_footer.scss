@@ -4,6 +4,8 @@
 footer {
   @include grid.split-column;
 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   color: var(--res-contrast-ft);
   padding-bottom: 3rem;
   font-size: 0.875rem;

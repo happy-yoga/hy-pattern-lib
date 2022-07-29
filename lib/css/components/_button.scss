@@ -5,9 +5,12 @@ button.button {
   border-radius: 3px;
   padding: 0.5rem;
   border: none;
+  background-position: top;
+  transition: all 0.5s ease-out;
 
   &:hover {
     background-color: var(--res-button-hov-bg);
     color: var(--res-button-hov-ft);
+    background-position: bottom;
   }
 }
