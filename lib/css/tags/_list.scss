@@ -11,8 +11,12 @@ ol {
     }
   }
 
-  &.unstyled li {
-    list-style-type: none;
+  &.unstyled {
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+    }
   }
 
   li > p {
