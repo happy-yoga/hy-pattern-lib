@@ -39,6 +39,11 @@ top-page-menu {
     font-weight: bold;
   }
 
+  .link,
+  .button {
+    white-space: nowrap;
+  }
+
   a.link {
     padding-left: 1.5rem;
     position: relative;
