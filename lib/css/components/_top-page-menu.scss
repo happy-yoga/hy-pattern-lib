@@ -118,11 +118,14 @@ top-page-menu {
   @include breakpoints.mq-lg($direction: "above") {
     width: 4rem;
     height: 10rem;
-    position: absolute;
+    position: fixed;
     right: 1rem;
     top: 1rem;
+    bottom: 1rem;
     left: auto;
     z-index: 1000;
+    overflow-y: scroll;
+    margin-top: 0;
 
     &.open {
       width: 20rem;
