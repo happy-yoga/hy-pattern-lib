@@ -1,0 +1,14 @@
+@use "../breakpoints";
+
+content-section {
+  display: block;
+  margin-bottom: 3rem;
+
+  @include breakpoints.mq-md($direction: "above") {
+    margin-bottom: 5rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

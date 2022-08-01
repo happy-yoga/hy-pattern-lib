@@ -1,0 +1,66 @@
+@use "../breakpoints";
+
+full-width-image-teaser {
+  display: block;
+  background-image: var(--background-image);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 -3.5rem;
+  padding: 2rem 3.5rem;
+
+  .squeeze & {
+    margin: 2rem -6.5rem;
+    padding: 2rem 6.5rem;
+  }
+}
+
+full-width-image-teaser-body {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  min-height: 30rem;
+  padding: 2rem 1.5rem 5rem;
+
+  h2 {
+    font-weight: 900;
+    color: rgb(0 0 0 / 0%);
+    background-clip: text;
+    background-image: var(--background-image);
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-size: 250%;
+    background-color: #d8d8d8;
+    margin-left: -6.5rem;
+    margin-right: -6.5rem;
+    padding: 1rem 6.5rem;
+  }
+
+  @include breakpoints.mq-md($direction: "above") {
+    width: 50%;
+
+    h2 {
+      margin-right: -50%;
+      padding-right: 50%;
+      background-position: -6rem 40%;
+      background-size: 250%;
+    }
+  }
+
+  p {
+    font-style: italic;
+  }
+
+  span.link-text {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
