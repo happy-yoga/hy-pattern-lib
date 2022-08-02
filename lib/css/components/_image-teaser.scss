@@ -1,0 +1,28 @@
+image-teaser {
+  display: block;
+  background-image: var(--image-teaser-background-image);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  border-radius: 6px;
+
+  .button {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+  }
+
+  .wrapping-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+  }
+}

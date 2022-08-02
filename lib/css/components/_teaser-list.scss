@@ -1,0 +1,17 @@
+@use "../breakpoints";
+
+teaser-list {
+  display: block;
+  display: grid;
+  gap: 0.5rem;
+}
+
+teaser-list-entry {
+  display: block;
+}
+
+@include breakpoints.mq-md($direction: "above") {
+  teaser-list {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
