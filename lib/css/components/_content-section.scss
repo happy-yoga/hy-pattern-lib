@@ -2,10 +2,10 @@
 
 content-section {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   @include breakpoints.mq-md($direction: "above") {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
   }
 
   &:last-of-type {
