@@ -9,6 +9,7 @@ standard-teaser {
   height: 15rem;
   position: relative;
   border-radius: 6px;
+  padding: 1rem;
 
   .button {
     position: absolute;
@@ -32,7 +33,7 @@ standard-teaser {
   // }
 
   &.with-label {
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
   }
 
   .link-text {
