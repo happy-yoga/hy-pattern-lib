@@ -12,7 +12,7 @@ top-page-menu {
   left: 0;
   top: 0.5rem;
   display: block;
-  transition: background 0.5s ease-out, width 0.5s ease-out, height 0.5s ease-out;
+  transition: background 0.5s ease-out, height 0.5s ease-out;
   background-color: $top-menu-bg-col;
   border-radius: 5px;
   margin-top: 0.5rem;
@@ -46,6 +46,7 @@ top-page-menu {
   .link,
   .button {
     // white-space: nowrap;
+    display: inline-block;
   }
 
   a.link {
@@ -124,13 +125,14 @@ top-page-menu {
   }
 
   @include breakpoints.mq-lg($direction: "above") {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     width: 4rem;
-    height: 10rem;
+    height: 20rem;
     position: fixed;
-    right: 1rem;
+    right: 2rem;
     top: 1rem;
-    bottom: 1rem;
+
+    // bottom: 1rem;
     left: auto;
     z-index: 1000;
     margin-top: 0;
@@ -159,23 +161,57 @@ top-menu-logo-wrapper {
   background-color: #fff;
   border-radius: 100%;
 
-  &::before,
-  &::after {
-    content: "";
-    box-sizing: content-box;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 2.2rem;
+  @include breakpoints.mq-lg {
+    &::before,
+    &::after {
+      content: "";
+      box-sizing: content-box;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 2.2rem;
+    }
+
+    &::before {
+      left: -1.5rem;
+      background: radial-gradient(circle 10px at top left, $top-menu-bg-col 98%, #fff) top left;
+    }
+
+    &::after {
+      right: -1.5rem;
+      background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
+    }
   }
 
-  &::before {
-    left: -1.5rem;
-    background: radial-gradient(circle 10px at top left, $top-menu-bg-col 98%, #fff) top left;
-  }
+  @include breakpoints.mq-lg($direction: "above") {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
 
-  &::after {
-    right: -1.5rem;
-    background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
+    .open & {
+      top: 100%;
+      transform: translate(-50%, -60%);
+
+      &::before,
+      &::after {
+        content: "";
+        box-sizing: content-box;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 3.1rem;
+      }
+
+      &::before {
+        left: -1.5rem;
+        background: radial-gradient(circle 10px at top left, $top-menu-bg-col 98%, #fff) top left;
+      }
+
+      &::after {
+        right: -1.5rem;
+        background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
+      }
+    }
   }
 }
