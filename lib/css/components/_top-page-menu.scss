@@ -5,8 +5,6 @@
 $link-color-swaps: #b49aff #bcd671 #fea080 #d7c3f6;
 $top-menu-bg-col: rgb(246 246 242);
 
-// $top-menu-bg-col: blue;
-
 top-page-menu {
   position: relative;
   left: 0;
@@ -116,11 +114,13 @@ top-page-menu {
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
-      background-color: rgb(249 249 249 / 80%);
+
+      // background-color: rgb(249 249 249 / 80%);
     }
 
     .ios &.open {
-      background-color: rgb(249 249 249 / 100%);
+      padding-top: 3rem;
+      padding-bottom: 0;
     }
   }
 
@@ -173,13 +173,52 @@ top-menu-logo-wrapper {
     }
 
     &::before {
-      left: -1.5rem;
+      left: -1.6rem;
       background: radial-gradient(circle 10px at top left, $top-menu-bg-col 98%, #fff) top left;
     }
 
     &::after {
-      right: -1.5rem;
+      right: -1.6rem;
       background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
+    }
+
+    .ios & {
+      bottom: 1rem;
+      transform: translate(-50%, 35%);
+
+      &::before,
+      &::after {
+        content: "";
+        top: 1.9rem;
+      }
+
+      &::before {
+        background: radial-gradient(circle 10px at bottom left, $top-menu-bg-col 98%, #fff) top left;
+      }
+
+      &::after {
+        background: radial-gradient(circle 10px at bottom right, $top-menu-bg-col 98%, #fff) top left;
+      }
+    }
+
+    .ios .open & {
+      bottom: auto;
+      top: -5rem;
+      transform: translate(-50%, 0);
+
+      &::before {
+        left: -1.2rem;
+      }
+
+      &::after {
+        right: -1.2rem;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        top: 3.8rem;
+      }
     }
   }
 
@@ -200,7 +239,7 @@ top-menu-logo-wrapper {
         position: absolute;
         width: 15px;
         height: 15px;
-        top: 3.1rem;
+        top: 3.2rem;
       }
 
       &::before {
