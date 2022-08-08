@@ -108,14 +108,20 @@ top-page-menu {
     }
 
     .ios & {
+      // box-sizing: content-box;
       z-index: 999;
       position: fixed;
       top: auto;
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
+      border-top: 5px solid #fff;
 
       // background-color: rgb(249 249 249 / 80%);
+    }
+
+    .ios & button[is="nav-button"] {
+      top: 1.3rem;
     }
 
     .ios &.open {
@@ -189,7 +195,7 @@ top-menu-logo-wrapper {
       &::before,
       &::after {
         content: "";
-        top: 1.9rem;
+        top: 2.25rem;
       }
 
       &::before {
