@@ -85,6 +85,7 @@ top-page-menu {
 
   &.open {
     height: auto;
+    border-bottom: 5px solid #fff;
 
     ul {
       display: block;
@@ -116,6 +117,7 @@ top-page-menu {
       left: 1rem;
       right: 1rem;
       border-top: 5px solid #fff;
+      border-bottom: 0;
 
       // background-color: rgb(249 249 249 / 80%);
     }
@@ -143,6 +145,14 @@ top-page-menu {
     z-index: 1000;
     margin-top: 0;
 
+    .landing-page & {
+      height: 10rem;
+    }
+
+    .landing-page.landing-page.main-content-visible & {
+      height: 20rem;
+    }
+
     &.open {
       width: 20rem;
       min-height: 90vh;
@@ -166,6 +176,10 @@ top-menu-logo-wrapper {
   border: 15px solid #fff;
   background-color: #fff;
   border-radius: 100%;
+
+  .landing-page & {
+    display: none;
+  }
 
   @include breakpoints.mq-lg {
     &::before,
@@ -257,6 +271,10 @@ top-menu-logo-wrapper {
         right: -1.5rem;
         background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
       }
+    }
+
+    .landing-page.main-content-visible & {
+      display: inline-block;
     }
   }
 }
