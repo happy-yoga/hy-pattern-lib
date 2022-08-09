@@ -26,6 +26,9 @@ full-width-image-teaser-body {
     font-weight: 900;
     color: rgb(0 0 0 / 0%);
     background-clip: text;
+    /* stylelint-disable */
+    -webkit-background-clip: text;
+    /* stylelint-enable */
     background-image: var(--background-image);
     background-position: center center;
     background-blend-mode: multiply;
@@ -42,7 +45,7 @@ full-width-image-teaser-body {
     h2 {
       margin-right: -50%;
       padding-right: 50%;
-      background-position: -6rem 40%;
+      background-position: center center;
       background-size: 250%;
     }
   }
