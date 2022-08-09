@@ -6,6 +6,12 @@ content-container {
   min-height: 150vh;
   padding: 7rem 0 5rem;
 
+  .not-ios .sub-page & {
+    @include breakpoints.mq-md {
+      padding-top: 8rem;
+    }
+  }
+
   @include grid.full-column;
 
   @include breakpoints.mq-md($direction: "above") {
