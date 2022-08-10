@@ -272,9 +272,9 @@ top-menu-logo-wrapper {
         background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
       }
     }
+  }
 
-    .landing-page.main-content-visible & {
-      display: inline-block;
-    }
+  .landing-page.main-content-visible & {
+    display: inline-block;
   }
 }
