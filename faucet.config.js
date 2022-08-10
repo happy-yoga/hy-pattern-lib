@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('faucet-pipeline-images')
+    // require('faucet-pipeline-images')
   ],
   watchDirs: ['./bin', './lib'],
   js: [{
@@ -14,20 +14,17 @@ module.exports = {
     target: './dist/hy-pattern-lib.css'
   }],
 
-  images: [
-    {
-      source: './lib/images',
-      target: './dist/images'
-    },
-    {
-      source: './lib/images',
-      target: './dist/images',
-      suffix: '-optimized',
-      format: 'webp',
-      quality: 90,
-      filter: file => !file.endsWith('.svg')
-    }
-  ],
+  // images: [
+  //   {
+  //     source: './lib/images',
+  //     target: './dist/images'
+  //   }
+  // ],
+
+  static: [{
+    source: './lib/images',
+    target: './dist/images'
+  }],
 
   manifest: {
     target: './dist/manifest.json',
