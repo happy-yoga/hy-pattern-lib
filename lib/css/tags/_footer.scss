@@ -9,6 +9,10 @@ footer {
   color: var(--res-contrast-ft);
   font-size: 0.875rem;
 
+  .ios & {
+    padding-bottom: 10rem;
+  }
+
   h4 {
     font-weight: bold;
     color: var(--res-primary-ft);
