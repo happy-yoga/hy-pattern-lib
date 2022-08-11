@@ -40,7 +40,11 @@ full-width-image-teaser-body {
   }
 
   @include breakpoints.mq-md($direction: "above") {
-    width: 50%;
+    width: 80%;
+
+    .text-box-right & {
+      margin-left: 20%;
+    }
 
     h2 {
       margin-right: -50%;
@@ -64,6 +68,14 @@ full-width-image-teaser-body {
 
     &:hover {
       text-decoration: none;
+    }
+  }
+
+  @include breakpoints.mq-lg($direction: "above") {
+    width: 50%;
+
+    .text-box-right & {
+      margin-left: 50%;
     }
   }
 }
