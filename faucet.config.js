@@ -29,6 +29,6 @@ module.exports = {
   manifest: {
     target: './dist/manifest.json',
     key: 'short',
-    baseURI: '/assets/'
+    baseURI: '/'
   }
 }
