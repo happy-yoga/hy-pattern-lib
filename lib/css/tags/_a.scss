@@ -14,3 +14,15 @@ a:active {
     color: var(--res-link-ft);
   }
 }
+
+a.external-link {
+  border: 1px solid #000;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background: asset-url("external-link-off.svg") no-repeat;
+    width: 1em;
+    height: 1em;
+  }
+}
