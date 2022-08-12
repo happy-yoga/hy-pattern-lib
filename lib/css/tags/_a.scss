@@ -16,13 +16,46 @@ a:active {
 }
 
 a.external-link {
-  border: 1px solid #000;
+  position: relative;
 
-  &::before {
-    content: "";
+  .icon {
+    box-sizing: border-box;
     display: inline-block;
-    background: asset-url("external-link-off.svg") no-repeat;
-    width: 1em;
-    height: 1em;
+    position: relative;
+    transform: scale(var(--ggs, 1));
+    width: 12px;
+    height: 12px;
+    box-shadow:
+      -2px 2px 0 0,
+      -4px -4px 0 -2px,
+      4px 4px 0 -2px;
+    margin-left: -2px;
+    margin-top: 1px;
+    margin-right: 0.5em;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      right: -4px;
+    }
+
+    &::before {
+      background: currentcolor;
+      transform: rotate(-45deg);
+      width: 12px;
+      height: 2px;
+      top: 1px;
+    }
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid;
+      border-top: 2px solid;
+      top: -4px;
+    }
   }
 }
