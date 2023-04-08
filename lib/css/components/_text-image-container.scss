@@ -1,0 +1,15 @@
+text-image-container {
+  display: block;
+
+  &[direction="left"] {
+    text-align: left;
+  }
+
+  &[direction="center"] {
+    text-align: center;
+  }
+
+  &[direction="right"] {
+    text-align: right;
+  }
+}
