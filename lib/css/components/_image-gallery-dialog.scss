@@ -165,3 +165,13 @@ dialog[open] .image-gallery-select-sibling, dialog[open] .image-gallery-close {
     --arrow-color: #fff !important;
   }
 }
+
+.download-image {
+  margin-top: .5rem;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJpb25pY29uIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZD0iTTMzNiAxNzZoNDBhNDAgNDAgMCAwMTQwIDQwdjIwOGE0MCA0MCAwIDAxLTQwIDQwSDEzNmE0MCA0MCAwIDAxLTQwLTQwVjIxNmE0MCA0MCAwIDAxNDAtNDBoNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMzIiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjMyIiBkPSJNMTc2IDI3Mmw4MCA4MCA4MC04ME0yNTYgNDh2Mjg4Ii8+PC9zdmc+)
+          no-repeat center;
+  background-size: cover;
+}
