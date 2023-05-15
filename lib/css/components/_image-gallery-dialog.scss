@@ -23,6 +23,7 @@
 
 .image-gallery-dialog::backdrop {
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .image-gallery-select-sibling {
