@@ -46,6 +46,7 @@ dialog[open] .image-gallery-select-sibling, dialog[open] .image-gallery-close {
 
 
 .image-gallery-select-sibling {
+  touch-action: manipulation;
   --arrow-color: rgb(159, 166, 167);
 }
 
