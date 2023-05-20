@@ -27,13 +27,13 @@ full-width-image-teaser-body {
     color: rgb(0 0 0 / 0%);
     background-clip: text;
     /* stylelint-disable */
-    -webkit-background-clip: text;
+    // -webkit-background-clip: text;
     /* stylelint-enable */
-    background-image: var(--background-image);
-    background-position: center center;
-    background-blend-mode: multiply;
+    // background-image: var(--background-image);
+    // background-position: center center;
+    // background-blend-mode: multiply;
     background-size: 250%;
-    background-color: #d8d8d8;
+    background-color: var(--def-primary-ft);
     margin-left: -6.5rem;
     margin-right: -6.5rem;
     padding: 1rem 6.5rem;
