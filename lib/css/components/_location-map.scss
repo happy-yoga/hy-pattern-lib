@@ -7,7 +7,7 @@
 
 location-map {
   display: block;
-  background-image: url(./images/location-min.svg);
+  background-image: asset-url("location-min.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: var(--location-zoom, cover);
