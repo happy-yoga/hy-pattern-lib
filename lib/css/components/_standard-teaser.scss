@@ -1,3 +1,5 @@
+@use "../breakpoints";
+
 standard-teaser {
   display: block;
   background-image: var(--teaser-background-image);
@@ -21,16 +23,20 @@ standard-teaser {
   .wrapping-link {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
     padding: 1rem;
+    background-color: #fff;
   }
 
-  // .teaser-headline {
+  @include breakpoints.mq-md($direction: "above") {
+    .wrapping-link {
+      right: 50%;
+    }
+  }
 
-  // }
 
   &.with-label {
     padding-bottom: 3.5rem;
