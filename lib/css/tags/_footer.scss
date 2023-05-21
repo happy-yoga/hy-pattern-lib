@@ -4,10 +4,20 @@
 footer {
   @include grid.split-column;
 
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 3rem;
   color: var(--res-contrast-ft);
   font-size: 0.875rem;
+
+  .footer-links {
+    display: block;
+    text-align: center;
+  }
+  @include breakpoints.mq-md($direction: "above") {
+    .footer-links {
+      text-align: left;
+    }
+  }
 
   .ios & {
     padding-bottom: 10rem;
@@ -25,21 +35,31 @@ footer {
   a:active {
     color: var(--res-contrast-ft);
   }
+}
 
-  @include breakpoints.mq-md($direction: "above") {
-    footer-section:first-of-type {
-      text-align: right;
-    }
-  }
 
-  @include breakpoints.mq-md {
-    dt {
-      text-align: right;
-    }
+.contact-address {
+  background-color: #fff;
+  padding: 1.5rem;
+  color: #000;
+  transform: translateY(-5rem);
+}
 
-    h4,
-    footer-section:first-of-type ul {
-      text-align: center;
-    }
-  }
+.contact-address p {
+  line-height: 1.5;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.contact-address strong {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.contact-address p, .contact-address strong {
+  font-size: 1rem;
+}
+.contact-address h4 {
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
 }
