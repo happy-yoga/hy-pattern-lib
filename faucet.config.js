@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       source: './lib/images',
-      target: './css-images',
+      target: './dist/css-images',
       filter: file => file === 'location-min.svg'
     }
   ],
@@ -48,6 +48,15 @@ module.exports = {
   manifest: {
     target: './dist/manifest.json',
     key: 'short',
-    baseURI: './'
+    // baseURI: '/',
+    value: (path) => {
+      if (path.includes('css-images')) {
+        // remove `/dist` prefix
+        const result = path.replace(/^(\/?dist)/, '.')
+        // console.log('remove /dist prefix from', path, result);
+        return result
+      }
+      return `/${path}`
+    }
   }
 }
