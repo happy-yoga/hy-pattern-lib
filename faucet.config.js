@@ -39,10 +39,11 @@ module.exports = {
     }
   ],
 
-  // static: [{
-  //   source: './lib/images',
-  //   target: './dist/images'
-  // }],
+  static: [{
+    source: './lib/images',
+    target: './dist/images',
+    filter: file => file.endsWith('.ico') || file.endsWith('.gif')
+  }],
 
   manifest: {
     target: './dist/manifest.json',
