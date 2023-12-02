@@ -19,6 +19,13 @@ footer {
     }
   }
 
+
+  @include breakpoints.mq-lg("above") {
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .ios & {
     padding-bottom: 10rem;
   }
@@ -65,3 +72,4 @@ footer {
   font-size: 1.25rem;
   margin-bottom: .5rem;
 }
+

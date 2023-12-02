@@ -7,9 +7,19 @@ scroll-foam {
 
   &.squeeze main {
     transform: scale(95%);
+    margin-bottom: -10%;
   }
 
   &.squeeze.squeeze-out main {
     transform: scale(100%);
+  }
+}
+
+
+@include breakpoints.mq-lg("above") {
+  main {
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

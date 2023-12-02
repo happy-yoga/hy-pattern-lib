@@ -12,5 +12,7 @@ body {
     "Segoe UI Emoji",
     "Segoe UI Symbol";
   color: var(--res-primary-ft);
-  background-color: var(--res-contrast-bg);
+
+  background: rgb(236,235,229);
+  background: linear-gradient(90deg, rgba(236,235,229,1) 0%, rgba(223,220,209,1) 100%);
 }
