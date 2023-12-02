@@ -1,0 +1,33 @@
+@use "../breakpoints";
+
+social-link-pills {
+  .social-link {
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @include breakpoints.mq-lg {
+      margin-left: 1rem;
+    }
+
+    @include breakpoints.mq-lg("above") {
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoints.mq-lg("above") {
+    position: absolute;
+    top: 0.5em;
+    left: -3rem;
+  }
+}

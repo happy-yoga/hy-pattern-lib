@@ -1,3 +1,5 @@
+@use "../breakpoints";
+
 * {
   box-sizing: border-box;
 }
@@ -7,4 +9,16 @@ main {
   z-index: 0;
   background: var(--res-primary-bg);
   overflow: hidden;
+  padding: 7rem 0 5rem;
+
+  .not-ios .sub-page & {
+    @include breakpoints.mq-md {
+      padding-top: 8rem;
+    }
+  }
+
+  @include breakpoints.mq-md($direction: "above") {
+    padding: 10rem 0 7rem;
+  }
 }
+
