@@ -1,6 +1,12 @@
 @use "../breakpoints";
 
 social-link-pills {
+  display: inline-block;
+  background-color: var(--def-contrast-bg);
+  border-radius: 3rem;
+
+  padding: .65rem 1.5rem;
+
   .social-link {
     svg {
       width: 2rem;
@@ -28,6 +34,7 @@ social-link-pills {
   @include breakpoints.mq-lg("above") {
     position: absolute;
     top: 0.5em;
-    left: -3rem;
+    left: -4.5rem;
+    padding: 1rem .75rem;
   }
 }
