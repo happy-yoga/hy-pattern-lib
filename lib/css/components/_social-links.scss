@@ -6,6 +6,10 @@ social-link-pills {
   border-radius: 3rem;
   padding: .75rem 1rem .75rem 1rem;
 
+  @include breakpoints.mq-lg {
+    margin-bottom: .5rem;
+  }
+
   .social-link {
     svg {
       width: 2rem;
