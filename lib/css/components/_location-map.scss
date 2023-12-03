@@ -15,6 +15,8 @@ location-map {
   top: 0;
   left: 0;
   min-height: 30rem;
+  -webkit-filter: grayscale(.5);
+  filter: grayscale(.5);
 }
 
 location-map.resizing {
