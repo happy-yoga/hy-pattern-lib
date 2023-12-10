@@ -4,7 +4,7 @@
   margin-left: 2rem;
   margin-right: 2rem;
 
-  @media screen and (orientation: landscape) {
+  @include breakpoints.landscape {
     padding-right: env(safe-area-inset-right);
     padding-left: env(safe-area-inset-left);
   }

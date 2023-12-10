@@ -38,9 +38,11 @@ hero-teaser {
       transform: translate(-50%, -20%);
       z-index: 2;
 
-      .ios & {
+
+      @include breakpoints.portrait($max-width: 600px) {
         transition: bottom 0.3s ease-out;
       }
+
 
       @include breakpoints.mq-md {
         transform: translate(-50%, -50%);

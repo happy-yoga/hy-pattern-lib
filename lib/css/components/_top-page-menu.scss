@@ -108,7 +108,7 @@ top-page-menu {
       padding-bottom: 3rem;
     }
 
-    .ios & {
+    @include breakpoints.portrait($max-width: 600px) {
       // box-sizing: content-box;
       z-index: 999;
       position: fixed;
@@ -122,13 +122,17 @@ top-page-menu {
       // background-color: rgb(249 249 249 / 80%);
     }
 
-    .ios & button[is="nav-button"] {
-      top: 1.3rem;
+    @include breakpoints.portrait($max-width: 600px) {
+       button[is="nav-button"] {
+        top: 1.3rem;
+      }
     }
 
-    .ios &.open {
-      padding-top: 3rem;
-      padding-bottom: 0;
+    @include breakpoints.portrait($max-width: 600px) {
+      &.open {
+        padding-top: 3rem;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -202,7 +206,7 @@ top-menu-logo-wrapper {
       background: radial-gradient(circle 10px at top right, $top-menu-bg-col 98%, #fff) top left;
     }
 
-    .ios & {
+    @include breakpoints.portrait($max-width: 600px) {
       bottom: 1rem;
       transform: translate(-50%, 35%);
 
@@ -221,23 +225,25 @@ top-menu-logo-wrapper {
       }
     }
 
-    .ios .open & {
-      bottom: auto;
-      top: -5rem;
-      transform: translate(-50%, 0);
+    @include breakpoints.portrait($max-width: 600px) {
+       .open & {
+        bottom: auto;
+        top: -5rem;
+        transform: translate(-50%, 0);
 
-      &::before {
-        left: -1.2rem;
-      }
+        &::before {
+          left: -1.2rem;
+        }
 
-      &::after {
-        right: -1.2rem;
-      }
+        &::after {
+          right: -1.2rem;
+        }
 
-      &::before,
-      &::after {
-        content: "";
-        top: 3.8rem;
+        &::before,
+        &::after {
+          content: "";
+          top: 3.8rem;
+        }
       }
     }
   }
