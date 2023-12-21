@@ -16,8 +16,9 @@ standard-teaser {
   .button {
     position: absolute;
     left: 50%;
-    bottom: 1rem;
+    bottom: .5rem;
     transform: translateX(-50%);
+    white-space: nowrap;
   }
 
   .wrapping-link, .action-button-teaser-wrapper {
@@ -30,6 +31,12 @@ standard-teaser {
     padding: 1rem;
     background-color: #fff;
     background-color: rgba(255, 255, 255, 1);
+  }
+
+  @include breakpoints.mq-md {
+    .button {
+      bottom: 2rem;
+    }
   }
 
   @include breakpoints.mq-md($direction: "above") {
